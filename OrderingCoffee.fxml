@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.OrderingCoffeeController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="214.0" layoutY="21.0" text="Ordering Coffee">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <VBox layoutX="81.0" layoutY="90.0" prefHeight="138.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Label text="Choose Cup Size:" />
+                  <RadioButton fx:id="shortCupSize" mnemonicParsing="false" onAction="#cupSizeSelected" text="Short">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="coffeeCupSize" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="tallCupSize" mnemonicParsing="false" onAction="#cupSizeSelected" text="Tall" toggleGroup="$coffeeCupSize" />
+                  <RadioButton fx:id="grandeCupSize" mnemonicParsing="false" onAction="#cupSizeSelected" text="Grande" toggleGroup="$coffeeCupSize" />
+                  <RadioButton fx:id="ventiCupSize" mnemonicParsing="false" onAction="#cupSizeSelected" text="Venti" toggleGroup="$coffeeCupSize" />
+               </children>
+            </VBox>
+            <VBox layoutX="214.0" layoutY="90.0" prefHeight="166.0" prefWidth="110.0" spacing="10.0">
+               <children>
+                  <Label text="Choose Add-Ons:" />
+                  <CheckBox fx:id="creamAddOn" disable="true" mnemonicParsing="false" onAction="#creamButton" text="Cream" />
+                  <CheckBox fx:id="syrupAddOn" disable="true" mnemonicParsing="false" onAction="#syrupButton" text="Syrup" />
+                  <CheckBox fx:id="milkAddOn" disable="true" mnemonicParsing="false" onAction="#milkButton" text="Milk" />
+                  <CheckBox fx:id="caramelAddOn" disable="true" mnemonicParsing="false" onAction="#caramelButton" text="Caramel" />
+                  <CheckBox fx:id="whippedCreamAddOn" disable="true" mnemonicParsing="false" onAction="#whippedCreamButton" text="Whipped Cream" />
+               </children>
+            </VBox>
+            <VBox layoutX="443.0" layoutY="211.0" prefHeight="56.0" prefWidth="76.0" spacing="5.0">
+               <children>
+                  <Label text="Sub-Total:" />
+                  <TextField fx:id="coffeeSubTotal" editable="false" prefHeight="26.0" prefWidth="74.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="418.0" layoutY="39.0" prefHeight="66.0" prefWidth="126.0" spacing="10.0">
+               <children>
+                  <Button fx:id="coffeeAddToOrder" disable="true" mnemonicParsing="false" onAction="#addCoffeeOrderButton" text="Add to Order" />
+               </children>
+            </VBox>
+            <Label layoutX="420.0" layoutY="106.0" text="Quantity" />
+            <Button fx:id="lowerButtonID" disable="true" layoutX="418.0" layoutY="147.0" mnemonicParsing="false" onAction="#lowerButton" text="Lower" />
+            <TextField fx:id="quantityText" editable="false" layoutX="472.0" layoutY="102.0" prefHeight="25.0" prefWidth="50.0" />
+            <Button fx:id="higherButtonID" disable="true" layoutX="497.0" layoutY="147.0" mnemonicParsing="false" onAction="#higherButton" text="Higher" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

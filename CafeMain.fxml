@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.CafeMainController">
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="131.0" layoutY="261.0" prefHeight="102.0" prefWidth="337.0" spacing="70.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#orderDonutsButton" prefHeight="26.0" prefWidth="99.0" text="Order Donuts" />
+                  <Button mnemonicParsing="false" onAction="#orderCoffeeButton" prefHeight="26.0" prefWidth="98.0" text="Order Coffee">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="102.0" prefWidth="110.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#orderingBasketButton" prefHeight="26.0" prefWidth="116.0" text="Ordering Basket" />
+                  <Button mnemonicParsing="false" onAction="#storeOrdersButton" prefHeight="26.0" prefWidth="102.0" text="Store Orders">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="257.0" layoutY="25.0" text="RU Cafe">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Coffee%20and%20Donuts%20Image.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
